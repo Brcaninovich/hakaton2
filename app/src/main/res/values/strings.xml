@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">hakaton2</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string-array name="amino_acids_full_txt">
+        <item>Alanine</item>
+        <item>Arginine</item>
+        <item>Aspirine</item>
+        <item>Randomli</item>
+        <item>Alanineee</item>
+        <item>Alaninex</item>
+    </string-array>
+
+    <string-array name="amino_acids_three_letters_txt">
+        <item>AAA</item>
+        <item>ABG</item>
+        <item>JBG</item>
+        <item>RXX</item>
+        <item>YYY</item>
+        <item>MOP</item>
+    </string-array>
+
+    <string-array name="amino_acids_one_letter_txt">
+        <item>A</item>
+        <item>A</item>
+        <item>J</item>
+        <item>R</item>
+        <item>Y</item>
+        <item>M</item>
+    </string-array>
+</resources>
