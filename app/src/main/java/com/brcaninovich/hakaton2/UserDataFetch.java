@@ -49,6 +49,7 @@ public class UserDataFetch {
                     }
 
                    Log.d("Probaa", "Proba");
+                    Log.d("Probaa", predmeti_ocjene.get(1));
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
