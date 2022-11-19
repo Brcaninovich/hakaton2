@@ -12,12 +12,16 @@ import android.widget.Toast;
 import com.brcaninovich.hakaton2.databinding.ActivityMainTestBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,6 +55,8 @@ public class MainActivityTest extends AppCompatActivity {
 
 
 
+
+
     static ActivityMainTestBinding binding;
 
     private static FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -58,7 +64,8 @@ public class MainActivityTest extends AppCompatActivity {
     private static DocumentReference noteRef2 = db.collection("Notebook").document("My second Note");
     private static DocumentReference noteRef3 = db.collection("Notebook").document("My third Note");
     private static DocumentReference noteRef4 = db.collection("Notebook").document("My fourth Note");
-    
+    private static DocumentReference noteRef5 = db.collection("Ucenik").document("test@test.com");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -208,10 +215,17 @@ public class MainActivityTest extends AppCompatActivity {
         String description = binding.editTextDescription.getText().toString();
 
         Map<String, Object> note = new HashMap<>();
-        note.put(KEY_TITLE, title);
-        note.put(KEY_DESCRIPTION, description);
+        note.put("Permisija", "ucenik");
+        note.put("Ime_Prezime", "Test Testic");
+        note.put("Predmet_Ocjene1", "Matematika,5,5,5,5");
+        note.put("Predmet_Ocjene2", "BHS,5,3,5,5");
+        note.put("Predmet_Ocjene3", "Engleski,4,4,5,5");
+        note.put("Izostanci_Opravdani", "11");
+        note.put("Izostanci_nepravdani", "3");
+        note.put("vladanje", "primjerno");
 
-        db.collection("Notebook").document("My first Note").set(note)
+
+        db.collection("Ucenik").document("test@test.com").set(note)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
