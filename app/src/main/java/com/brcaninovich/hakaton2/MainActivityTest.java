@@ -17,7 +17,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
@@ -217,9 +216,13 @@ public class MainActivityTest extends AppCompatActivity {
         Map<String, Object> note = new HashMap<>();
         note.put("Permisija", "ucenik");
         note.put("Ime_Prezime", "Test Testic");
-        note.put("Predmet_Ocjene1", "Matematika,5,5,5,5");
-        note.put("Predmet_Ocjene2", "BHS,5,3,5,5");
-        note.put("Predmet_Ocjene3", "Engleski,4,4,5,5");
+        note.put("Predmeti_Ocjene", Arrays.asList("Matematika,5,5,5,5", "BHS,5,3,5,5", "Engleski,4,4,5,5"));
+        note.put("Raspored_Casova", Arrays.asList(
+                "Ponedjeljak,Matematika,Tjelesni,Tjelesni,Hemija,BHS,Engleski",
+                "Utorak,Matematika,Tjelesni,Tjelesni,Hemija",
+                "Srijeda,Matematika,Tjelesni,Tjelesni",
+                "Cetvrtak,Matematika,Tjelesni,Tjelesni,Hemija,BHS",
+                "Petak,Matematika,Tjelesni,Tjelesni,Hemija,BHS"));
         note.put("Izostanci_Opravdani", "11");
         note.put("Izostanci_nepravdani", "3");
         note.put("vladanje", "primjerno");
