@@ -2,6 +2,7 @@ package com.brcaninovich.hakaton2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import com.google.android.material.snackbar.Snackbar;
@@ -38,8 +39,10 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Bit ce nesto kasnije", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                //Log.d("Poruka", UserDataFetch.raspored_casova.get(1));
             }
         });
+        
 
         binding.odjavaBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -10,7 +10,7 @@ public class IzostanciViewModel extends ViewModel {
 
     public IzostanciViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Ovdje dolaze izostanci");
+        mText.setValue("");
     }
 
     public LiveData<String> getText() {

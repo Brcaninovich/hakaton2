@@ -1,10 +1,9 @@
-package com.brcaninovich.hakaton2.ui.izostanci;
+package com.brcaninovich.hakaton2.ui.komentar;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,10 +11,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.brcaninovich.hakaton2.UserDataFetch;
 import com.brcaninovich.hakaton2.databinding.FragmentIzostanciBinding;
-import com.brcaninovich.hakaton2.databinding.FragmentRasporedBinding;
-import com.brcaninovich.hakaton2.ui.raspored.RasporedViewModel;
+import com.brcaninovich.hakaton2.ui.izostanci.IzostanciViewModel;
 
-public class IzostanciFragment extends Fragment {
+public class komentarFragment extends Fragment {
 
 private FragmentIzostanciBinding binding;
 

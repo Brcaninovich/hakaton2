@@ -10,7 +10,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="2dp"
         android:orientation="vertical">
 
         <TextView
@@ -75,7 +78,12 @@
             android:fontFamily="@font/alatsi"
             android:textColor="#685D5C"/>
 
-
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="3dp"
+            android:background="?android:attr/listDivider" />
 
 
     </LinearLayout>

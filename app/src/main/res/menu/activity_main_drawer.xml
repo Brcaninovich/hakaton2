@@ -15,10 +15,10 @@
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Ocjene/Vladanje" />
+            android:title="Ocjene" />
         <item
             android:id="@+id/nav_izostanci"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Izostanci" />
+            android:title="Izostanci/Vladanje" />
     </group>
 </menu>

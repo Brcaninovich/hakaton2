@@ -35,8 +35,8 @@ private FragmentRasporedBinding binding;
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
         recyclerView.setAdapter(new RandomNumListAdapter2(1234));
-        final TextView textView = binding.textHome;
-        rasporedViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        //final TextView textView = binding.textHome;
+        //rasporedViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

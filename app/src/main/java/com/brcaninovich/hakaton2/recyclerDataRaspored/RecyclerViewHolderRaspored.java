@@ -1,5 +1,6 @@
 package com.brcaninovich.hakaton2.recyclerDataRaspored;
 
+import android.graphics.Typeface;
 import android.view.View;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class RecyclerViewHolderRaspored extends RecyclerView.ViewHolder {
     private TextView view4;
     private TextView view5;
     private TextView view6;
+    private TextView view7;
 
     public RecyclerViewHolderRaspored(@NonNull View itemView) {
         super(itemView);
@@ -25,7 +27,7 @@ public class RecyclerViewHolderRaspored extends RecyclerView.ViewHolder {
         view4 = itemView.findViewById(R.id.cas3);
         view5 = itemView.findViewById(R.id.cas4);
         view6 = itemView.findViewById(R.id.cas5);
-        view6 = itemView.findViewById(R.id.cas6);
+        view7 = itemView.findViewById(R.id.cas6);
     }
 
     public TextView getView(){
@@ -45,6 +47,9 @@ public class RecyclerViewHolderRaspored extends RecyclerView.ViewHolder {
     }
     public TextView getView6(){
         return view6;
+    }
+    public TextView getView7(){
+        return view7;
     }
 }
 

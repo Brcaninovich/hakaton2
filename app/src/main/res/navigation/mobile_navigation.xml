@@ -20,12 +20,12 @@
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.brcaninovich.hakaton2.ui.slideshow.SlideshowFragment"
-        android:label="Ocjene/Vladanje"
+        android:label="Ocjene"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_izostanci"
         android:name="com.brcaninovich.hakaton2.ui.izostanci.IzostanciFragment"
-        android:label="Izostanci"
+        android:label="Izostanci/Vladanje"
         tools:layout="@layout/fragment_izostanci" />
 </navigation>

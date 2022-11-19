@@ -22,12 +22,13 @@ public class UserDataFetch {
 
     static String email = mUser.getEmail();
 
-    static String ime_prezime;
-    static List<String> predmeti_ocjene = new ArrayList<>();
-    static List<String> raspored_casova = new ArrayList<>();
-    static String izostanci_opravdani;
-    static String izostanci_neopravdani;
-    static String vladanje;
+    public static String ime_prezime;
+    public static List<String> predmeti_ocjene = new ArrayList<>();
+    public static List<String> raspored_casova = new ArrayList<>();
+    public static String izostanci_opravdani;
+    public static String izostanci_neopravdani;
+    public static String vladanje;
+    Integer broj = UserDataFetch.raspored_casova.size();
 
     private static FirebaseFirestore db = FirebaseFirestore.getInstance();
     private static DocumentReference ucenik = db.collection("Ucenik").document(email);
@@ -39,17 +40,19 @@ public class UserDataFetch {
                 if(documentSnapshot.exists()){
                     ime_prezime = documentSnapshot.getString("Ime_Prezime");
                     izostanci_opravdani = documentSnapshot.getString("Izostanci_Opravdani");
-                    izostanci_neopravdani = documentSnapshot.getString("Izostanci_neopravdani");
+                    izostanci_neopravdani = documentSnapshot.getString("Izostanci_nepravdani");
                     vladanje = documentSnapshot.getString("vladanje");
                     if (documentSnapshot.exists()) {
                         predmeti_ocjene = (List<String>) documentSnapshot.get("Predmeti_Ocjene");
-                        raspored_casova = (List<String>) documentSnapshot.get("Predmeti_Ocjene");
+                        raspored_casova = (List<String>) documentSnapshot.get("Raspored_Casova");
                 }else{
                         //PROBA
                     }
 
+
+                    Integer broj = raspored_casova.size();
                    Log.d("Probaa", "Proba");
-                    Log.d("Probaa", predmeti_ocjene.get(1));
+                    //Log.d("Probaa", predmeti_ocjene.get(1));
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
