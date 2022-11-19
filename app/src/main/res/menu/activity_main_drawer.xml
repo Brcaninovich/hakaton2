@@ -20,5 +20,9 @@
             android:id="@+id/nav_izostanci"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Izostanci/Vladanje" />
+        <item
+            android:id="@+id/nav_komentar"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Komentar" />
     </group>
 </menu>

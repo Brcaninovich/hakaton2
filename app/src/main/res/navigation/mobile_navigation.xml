@@ -28,4 +28,10 @@
         android:name="com.brcaninovich.hakaton2.ui.izostanci.IzostanciFragment"
         android:label="Izostanci/Vladanje"
         tools:layout="@layout/fragment_izostanci" />
+
+    <fragment
+        android:id="@+id/nav_komentar"
+        android:name="com.brcaninovich.hakaton2.ui.komentar.komentarFragment"
+        android:label="Komentar"
+        tools:layout="@layout/fragment_komentar" />
 </navigation>

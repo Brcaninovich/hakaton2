@@ -11,31 +11,22 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.brcaninovich.hakaton2.UserDataFetch;
 import com.brcaninovich.hakaton2.databinding.FragmentIzostanciBinding;
-import com.brcaninovich.hakaton2.ui.izostanci.IzostanciViewModel;
+import com.brcaninovich.hakaton2.databinding.FragmentKomentarBinding;
 
 public class komentarFragment extends Fragment {
 
-private FragmentIzostanciBinding binding;
+private FragmentKomentarBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-            ViewGroup container, Bundle savedInstanceState) {
-        IzostanciViewModel izostanciViewModel =
-                new ViewModelProvider(this).get(IzostanciViewModel.class);
+                        ViewGroup container, Bundle savedInstanceState) {
+                        komentarViewModel komentarViewModel =
+                        new ViewModelProvider(this).get(komentarViewModel.class);
 
-    binding = FragmentIzostanciBinding.inflate(inflater, container, false);
+    binding = FragmentKomentarBinding.inflate(inflater, container, false);
     View root = binding.getRoot();
 
 
 
-        //final TextView textView = binding.textHome;
-        binding.neopravdani.setText("Neopravdani");
-        binding.opravdani.setText("Opravdani");
-        binding.vladanjeTV.setText("Vladanje");
-
-        //DIO ZA FEC
-        binding.neopravdaniHolder.setText(UserDataFetch.izostanci_neopravdani);
-        binding.opravdaniHolder.setText(UserDataFetch.izostanci_opravdani);
-        binding.vladanjeHolder.setText(UserDataFetch.vladanje);
         //final TextView textView = binding.textHome;
         //izostanciViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
