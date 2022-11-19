@@ -37,7 +37,7 @@
                 android:text="Odjavite se"
                 android:fontFamily="@font/andika"
                 android:layout_marginBottom="10dp"
-                android:backgroundTint="#1976D2"
+                android:backgroundTint="#353535"
                 app:cornerRadius="10dp"
                 android:id="@+id/odjavaBtn"/>
 

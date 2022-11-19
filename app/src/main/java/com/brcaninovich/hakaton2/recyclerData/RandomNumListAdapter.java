@@ -1,8 +1,10 @@
 package com.brcaninovich.hakaton2.recyclerData;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +17,8 @@ import java.util.Random;
 public class RandomNumListAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
     private Random random;
     private Integer brojac = 0;
+
+
 
     public RandomNumListAdapter(int seed) {
         this.random = new Random(seed);
@@ -36,6 +40,14 @@ public class RandomNumListAdapter extends RecyclerView.Adapter<RecyclerViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
+
+        int broj = position;
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Porukaa", String.valueOf(broj) );
+            }
+        });
 
         //holder.getView().setText(String.valueOf(random.nextInt()));
         if(brojac == 0){

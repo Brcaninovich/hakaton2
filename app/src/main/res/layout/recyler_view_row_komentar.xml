@@ -8,16 +8,14 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/kartica"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_margin="10dp"
         app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="#1976D2">
+        app:cardBackgroundColor="#A6EA6E">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/side_nav_bar"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,12 +23,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/randomText"
+                android:id="@+id/komentar"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="This is some temp text"
-                android:textColor="@color/white"
+                tools:text="Komentar"
+                android:textColor="#474747"
                 android:textSize="24sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
@@ -39,13 +37,13 @@
                 />
 
             <TextView
-                android:id="@+id/randomText2"
+                android:id="@+id/komentarHolder"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                tools:text="This is some temp text" />
+                android:textColor="#FF474747"
+                android:textSize="20sp"
+                tools:text="Komentar neki zaoravo" />
 
         </LinearLayout>
 

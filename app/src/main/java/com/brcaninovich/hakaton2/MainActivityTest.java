@@ -209,7 +209,7 @@ public class MainActivityTest extends AppCompatActivity {
         });
     }
 
-    public void saveNote(View view) {
+    /*public void saveNote(View view) {
         String title = binding.editTextTitle2.getText().toString();
         String description = binding.editTextDescription.getText().toString();
 
@@ -226,9 +226,62 @@ public class MainActivityTest extends AppCompatActivity {
         note.put("Izostanci_Opravdani", "11");
         note.put("Izostanci_nepravdani", "3");
         note.put("vladanje", "primjerno");
+        note.put("Komentar", Arrays.asList(
+                "Pohvala, Ucenik je ostvario odlican rezultat na danasnjem testu",
+                "Ukor, Ucenik je napravio problem u skoli u kojem je intervenisala i hitna pomoc"));
+
 
 
         db.collection("Ucenik").document("test@test.com").set(note)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(MainActivityTest.this, "Note saved", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivityTest.this, "Error!", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, e.toString());
+                    }
+                });
+    }*/
+
+    /*public void saveNote(View view) {
+        Map<String, Object> note = new HashMap<>();
+        note.put("Permisija", "Ucitelj");
+        note.put("Ime_Prezime", "Test Testic");
+        note.put("Predmet", "Predmet Predaje");
+
+
+
+        db.collection("Ucitelj").document("ucitelj@test.com").set(note)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(MainActivityTest.this, "Note saved", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivityTest.this, "Error!", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, e.toString());
+                    }
+                });
+    }*/
+
+    public void saveNote(View view) {
+
+        Map<String, Object> note = new HashMap<>();
+        note.put("Raspored_Casova", Arrays.asList(
+                "Ponedjeljak,Matematika,Tjelesni,Tjelesni,Hemija,BHS,Engleski",
+                "Utorak,Matematika,Tjelesni,Tjelesni,Hemija",
+                "Srijeda,Matematika,Tjelesni,Tjelesni",
+                "Cetvrtak,Matematika,Tjelesni,Tjelesni,Hemija,BHS",
+                "Petak,Matematika,Tjelesni,Tjelesni,Hemija,BHS"));
+
+
+        db.collection("Raspored").document("raspored").set(note)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {

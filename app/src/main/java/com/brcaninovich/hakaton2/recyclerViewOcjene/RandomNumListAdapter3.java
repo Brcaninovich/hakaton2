@@ -56,7 +56,6 @@ public class RandomNumListAdapter3 extends RecyclerView.Adapter<RecyclerViewHold
             String[] stringArr = UserDataFetch.predmeti_ocjene.get(brojac).split(",");
 
 
-            holder.getView().setText("Ocjene");
             holder.getView10().setText(vrati_string(stringArr, 0));
             holder.getView2().setText(vrati_string(stringArr, 1));
             holder.getView3().setText(vrati_string(stringArr, 2));

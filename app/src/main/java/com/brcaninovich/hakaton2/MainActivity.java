@@ -81,7 +81,9 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
+                        progressdialog.setMessage("Skidanje podataka u toku...");
                         UserDataFetch.fetcData2();
+                        UserDataFetch.fetcRaspored();
                         progressdialog.dismiss();
                         novi_intent();
                     }else{
@@ -112,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             progressdialog.setTitle("Prijava");
             progressdialog.setCanceledOnTouchOutside(false);
             progressdialog.show();
-            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            mAuth.createUserWithEmailAndPassword("sadasd@kdadks.com", "123456").addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {

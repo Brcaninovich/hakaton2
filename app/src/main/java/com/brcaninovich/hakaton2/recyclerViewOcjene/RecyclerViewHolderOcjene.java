@@ -23,7 +23,7 @@ public class RecyclerViewHolderOcjene extends RecyclerView.ViewHolder {
 
     public RecyclerViewHolderOcjene(@NonNull View itemView) {
         super(itemView);
-        view = itemView.findViewById(R.id.firstOcjene);
+
         view2 = itemView.findViewById(R.id.ocjena_1);
         view3 = itemView.findViewById(R.id.ocjena_2);
         view4 = itemView.findViewById(R.id.ocjena_3);
@@ -35,9 +35,6 @@ public class RecyclerViewHolderOcjene extends RecyclerView.ViewHolder {
         view10 = itemView.findViewById(R.id.predmetTV);
     }
 
-    public TextView getView(){
-        return view;
-    }
     public TextView getView2(){
         return view2;
     }
