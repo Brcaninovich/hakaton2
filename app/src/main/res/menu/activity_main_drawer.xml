@@ -6,25 +6,25 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/news_icon"
             android:title="Novosti" />
         <item
             android:id="@+id/nav_raspored"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/date_event_month_icon"
             android:title="Raspored casova" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/gradee"
             android:title="Ocjene" />
         <item
             android:id="@+id/nav_izostanci"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/arrow_icon"
             android:title="Izostanci/Vladanje" />
 
 
         <item
             android:id="@+id/nav_komentar"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/comment_text_icon"
             android:title="Komentar" />
     </group>
 </menu>

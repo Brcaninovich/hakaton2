@@ -13,6 +13,7 @@ public class RecyclerViewHolderKomentar extends RecyclerView.ViewHolder {
 
     private TextView view;
     private TextView view2;
+    private TextView view4;
     private CardView view3;
 
 
@@ -20,7 +21,9 @@ public class RecyclerViewHolderKomentar extends RecyclerView.ViewHolder {
         super(itemView);
         view = itemView.findViewById(R.id.komentar);
         view2 = itemView.findViewById(R.id.komentarHolder);
+        view4 = itemView.findViewById(R.id.datumHolder);
         view3 = itemView.findViewById(R.id.kartica);
+
 
     }
 
@@ -30,8 +33,12 @@ public class RecyclerViewHolderKomentar extends RecyclerView.ViewHolder {
     public TextView getView2(){
         return view2;
     }
+    public TextView getView4(){
+        return view4;
+    }
     public CardView getView3(){
         return view3;
     }
+
 }
 

@@ -55,6 +55,27 @@ public class UserDataFetch {
         });
     }
 
+    public static void fetcData(String email){
+        DocumentReference ucenikk = db.collection("Ucenik").document(email);
+        ucenikk.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(documentSnapshot.exists()){
+                    ime_prezime = documentSnapshot.getString("Ime_Prezime");
+                    izostanci_opravdani = documentSnapshot.getString("Izostanci_Opravdani");
+                    izostanci_neopravdani = documentSnapshot.getString("Izostanci_nepravdani");
+                    vladanje = documentSnapshot.getString("vladanje");
+                    predmeti_ocjene = (List<String>) documentSnapshot.get("Predmeti_Ocjene");
+                    komentari = (List<String>) documentSnapshot.get("Komentar");
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+            }
+        });
+    }
+
     public static void fetcRaspored(){
         raspored.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override

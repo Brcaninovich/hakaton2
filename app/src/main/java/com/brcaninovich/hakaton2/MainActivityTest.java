@@ -209,7 +209,7 @@ public class MainActivityTest extends AppCompatActivity {
         });
     }
 
-    /*public void saveNote(View view) {
+    public void saveNote(View view) {
         String title = binding.editTextTitle2.getText().toString();
         String description = binding.editTextDescription.getText().toString();
 
@@ -226,6 +226,7 @@ public class MainActivityTest extends AppCompatActivity {
         note.put("Izostanci_Opravdani", "11");
         note.put("Izostanci_nepravdani", "3");
         note.put("vladanje", "primjerno");
+        note.put("email", "test.test@gmail.com");
         note.put("Komentar", Arrays.asList(
                 "Pohvala, Ucenik je ostvario odlican rezultat na danasnjem testu",
                 "Ukor, Ucenik je napravio problem u skoli u kojem je intervenisala i hitna pomoc"));
@@ -245,7 +246,7 @@ public class MainActivityTest extends AppCompatActivity {
                         Log.d(TAG, e.toString());
                     }
                 });
-    }*/
+    }
 
     /*public void saveNote(View view) {
         Map<String, Object> note = new HashMap<>();
@@ -270,7 +271,7 @@ public class MainActivityTest extends AppCompatActivity {
                 });
     }*/
 
-    public void saveNote(View view) {
+    /*public void saveNote(View view) {
 
         Map<String, Object> note = new HashMap<>();
         note.put("Raspored_Casova", Arrays.asList(
@@ -294,7 +295,7 @@ public class MainActivityTest extends AppCompatActivity {
                         Log.d(TAG, e.toString());
                     }
                 });
-    }
+    }*/
 
     public void saveNote2(View view) {
         String title = binding.editTextTitle2.getText().toString();

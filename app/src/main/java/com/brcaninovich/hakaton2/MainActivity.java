@@ -57,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //auth();
-                Intent intent = new Intent(MainActivity.this, MainActivityTest.class);
+                //MainActivityTest.class
+                //profesorActivity.class
+                Intent intent = new Intent(MainActivity.this, profesorActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }

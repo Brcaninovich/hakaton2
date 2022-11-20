@@ -1,6 +1,7 @@
 package com.brcaninovich.hakaton2.recyclerViewKomentar;
 
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,19 +54,27 @@ public class RandomNumListAdapter4 extends RecyclerView.Adapter<RecyclerViewHold
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolderKomentar holder, int position) {
 
+        int broj = position;
+
         //holder.getView().setText(String.valueOf(random.nextInt()));
             String[] stringArr = UserDataFetch.komentari.get(brojac).split(",");
+            holder.getView().setTextColor(Color.WHITE);
+            holder.getView2().setTextColor(Color.WHITE);
+            holder.getView4().setTextColor(Color.WHITE);
+
 
             if(stringArr[0].equals("Ukor")){
-                holder.getView3().setCardBackgroundColor(Color.parseColor("#FFF43D3D"));
-                holder.getView().setTextColor(Color.WHITE);
-                holder.getView2().setTextColor(Color.WHITE);
+                holder.getView3().setCardBackgroundColor(Color.parseColor("#D82C2C"));
             }else if(stringArr[0].equals("Sugestija")){
-                holder.getView3().setCardBackgroundColor(Color.parseColor("#FFF43D3D"));
+                holder.getView3().setCardBackgroundColor(Color.parseColor("#D9C72B"));
+            }
+            else if(stringArr[0].equals("Pohvala")){
+                holder.getView3().setCardBackgroundColor(Color.parseColor("#97FF5E"));
             }
 
                 holder.getView().setText(stringArr[0]);
                 holder.getView2().setText(stringArr[1]);
+                holder.getView4().setText(stringArr[2]);
 
 
 
